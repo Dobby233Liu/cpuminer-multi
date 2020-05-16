@@ -1,0 +1,15 @@
+name: msbuild
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - uses: microsoft/setup-msbuild@master
+      - run: "msbuild /p:Configuration=Release /p:Platform=x64"
