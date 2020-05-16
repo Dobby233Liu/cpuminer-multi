@@ -12,4 +12,4 @@ jobs:
         with:
           submodules: recursive
       - run: sudo apt install gcc-mingw-w64 g++-mingw-w64
-      - run: "./mingw64.sh"
+      - run: "chmod +x mingw64.sh && ./mingw64.sh"
