@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
-      - uses: microsoft/setup-msbuild@master
-      - run: "msbuild /p:Configuration=Release /p:Platform=x64"
+      - run: "./mingw64.sh"
+        shell: bash
