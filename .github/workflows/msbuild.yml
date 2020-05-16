@@ -11,5 +11,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
+      - run: |
+          git clone https://git.savannah.gnu.org/git/automake.git
+          cd automake
+          ./configure
+          make && make install
+          cd ..
+          git clone https://git.savannah.gnu.org/git/autoconf.git
+          cd autoconf
+          make && make install
       - run: "./mingw64.sh"
         shell: bash
