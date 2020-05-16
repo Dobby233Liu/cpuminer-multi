@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
-      - run: sudo apt install gcc-mingw-w64-x86_64 g++-mingw-w64-x86_64
+      - run: sudo apt install gcc-mingw-w64 g++-mingw-w64
       - run: "./mingw64.sh"
