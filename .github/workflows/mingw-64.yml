@@ -17,15 +17,15 @@ jobs:
           cd automake
           echo "install automake"
           ./configure
-          make
-          make install
+          mingw64-make
+          mingw64-make install
           cd ..
           echo "download autoconf"
           git clone https://git.savannah.gnu.org/git/autoconf.git --recursive
           cd autoconf
           echo "install autoconf"
           ./configure
-          make
-          make install
+          mingw64-make
+          mingw64-make install
       - run: "./mingw64.sh"
         shell: bash
